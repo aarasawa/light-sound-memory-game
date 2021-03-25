@@ -31,7 +31,7 @@ function stopGame() {
 }
 
 function randomNum() {
-  for (let j = 0; j <= 9; j++) {
+  for (let j = 0; j <= 4; j++) {
     const random = Math.floor(Math.random() * 8) + 1 //between 1 and 9
     pattern[j] = random;
     console.log(pattern[j]);
@@ -152,7 +152,6 @@ g.connect(context.destination)
 g.gain.setValueAtTime(0, context.currentTime)
 o.connect(g)
 o.start(0)
-
 
 // Set the date we're counting down to
 var distance = 60000;
