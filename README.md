@@ -27,10 +27,10 @@ The following **optional** features are implemented:
 * [X] More than 4 functional game buttons
 * [ ] Playback speeds up on each turn
 * [X] Computer picks a different pattern each time the game is played
-* [ ] Player only loses after 3 mistakes (instead of on the first mistake)
+* [X] Player only loses after 3 mistakes (instead of on the first mistake)
 * [ ] Game button appearance change goes beyond color (e.g. add an image)
 * [ ] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
-* [ ] User has a limited amount of time to enter their guess on each turn
+* [X] User has a limited amount of time to enter their guess on each turn
 
 The following **additional** features are implemented:
 
@@ -44,16 +44,22 @@ Here's a walkthrough of implemented user stories:
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
-[YOUR ANSWER HERE]
+    
+    https://www.w3schools.com/howto/howto_js_countdown.asp
+    JavaScript - David Flanagan
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[YOUR ANSWER HERE]
+    
+    Having to deal with the way the three files interacted. Programming in HTML, CSS, and JS is new to me since I have mainly been programming in C++ and Python. Learning how they were able to interact and trying to understand the rules between the three languages was very fun. I used some online resources and consulted a book on JS. 
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+    
+    How would someone link a database to a website?
+    Typically how many files are there per website?
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+
+    First, I would mete out the game logic a little bit more so that after a certain amount of time the sequence plays again. Also I would make it so that if the player tried to spam some buttons it would could read those.
 
 
 
