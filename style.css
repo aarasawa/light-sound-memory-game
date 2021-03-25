@@ -12,6 +12,10 @@ h1 {
   color: #ffffff;
 }
 
+p {
+  white-space: nowrap;
+}
+
 button {
   padding: 15px;
   border-radius: 10px;

@@ -11,12 +11,7 @@
     <link rel="stylesheet" href="/style.css">
     
     <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer>
-      window.onload = function() {
-        var number = 3;
-        document.getElementById("output").innerHTML = number;
-      }
-    </script>
+    <script src="/script.js" defer></script>
   </head>  
   <body>
     <h1>Color and Sound Memory Game</h1>
@@ -29,8 +24,9 @@
         </button>
         <button id="stopBtn" onclick="stopGame()" class="hidden">
           Stop
-        </button>
-        Lives: <p id="output"></p>
+        </button> 
+        <button id="timer"></button>
+        Lives: <button id="ticker"></button>
       </div>
     </p>
   
