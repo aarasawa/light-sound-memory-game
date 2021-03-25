@@ -39,7 +39,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-    https://recordit.co/x5CC2Ncb7h
+    http://g.recordit.co/x5CC2Ncb7h.gif
+    http://g.recordit.co/BohMc7hmVZ.gif
 
 
 ## Reflection Questions
@@ -59,7 +60,7 @@ Here's a walkthrough of implemented user stories:
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 
-    First, I would mete out the game logic a little bit more so that after a certain amount of time the sequence plays again. Also I would make it so that if the player tried to spam some buttons it would could read those.
+    First, I would mete out the game logic a little bit more so that after a certain amount of time the sequence plays again. Also I would make it so that if the player tried to spam some buttons it would could read those. Additionally, if the player gets something wrong they would need to enter the sequence correctly from the start again. The way it currently behaves the player has to continue from where they made the mistake otherwise it registers the previous input as an error.
 
 
 
