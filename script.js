@@ -15,6 +15,7 @@ var lives = 3;
 function startGame() {
   //initialize game variables
   lives = 3;
+  distance = 60000;
   progress = 0;
   gamePlaying = true;
   randomNum();
