@@ -78,7 +78,7 @@ function winGame() {
 
 function wrongGuess() {
   lives--;
-  if (lives > 1) {
+  if (lives >= 1) {
    alert("Wrong! Try again, you have " + lives + " attempts left."); 
   }
 }
