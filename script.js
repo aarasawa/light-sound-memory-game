@@ -10,12 +10,12 @@ var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5; //must be between 0.0 and 1.0
 var guessCounter = 0;
-var lives = 0;
+var lives = 3;
 
 function startGame() {
   //initialize game variables
+  lives = 3;
   progress = 0;
-  lives = 0;
   gamePlaying = true;
   randomNum();
   //swap the Start and Stop buttons
@@ -75,17 +75,25 @@ function winGame() {
   alert("Game Over. You won!")
 }
 
+function wrongGuess() {
+  lives--;
+  if (lives > 1) {
+   alert("Wrong! Try again, you have " + lives + " attempts left."); 
+  }
+}
+
 function guess(btn) {
   console.log("user guessed: " + btn);
   if(!gamePlaying) {
     return;
   }
   
-if(btn == pattern[guessCounter]){
+  if(btn == pattern[guessCounter]){
     if(guessCounter == progress){
       if(progress == pattern.length - 1){
         winGame();
       }else{
+        distance = 60000;
         progress++;
         playClueSequence();
       }
@@ -93,10 +101,10 @@ if(btn == pattern[guessCounter]){
       guessCounter++;
     }
   }else{
-    if (lives == 0) {
+    if (lives == 1) {
       loseGame();
     }
-    lives--;
+    wrongGuess();
   }
 }    
 
@@ -144,3 +152,30 @@ g.connect(context.destination)
 g.gain.setValueAtTime(0, context.currentTime)
 o.connect(g)
 o.start(0)
+
+// Set the date we're counting down to
+var distance = 60000;
+// Update the count down every 1 second
+var x = setInterval(function() {
+  if (gamePlaying) {
+    distance = distance - 1000;
+  }
+  
+  // Time calculations minutes and seconds
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="timer"
+  document.getElementById("timer").innerHTML = minutes + "m " + seconds + "s";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    loseGame();
+    document.getElementById("timer").innerHTML = "TIME'S UP!";
+  }
+}, 1000);
+
+var y = setInterval(function()  {
+  document.getElementById("ticker").innerHTML = lives;
+}, 1000)
